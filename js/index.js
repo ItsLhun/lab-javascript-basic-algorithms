@@ -67,3 +67,22 @@ for (let word of wordsArray){
 }
 
 console.log(etCount);
+
+// bonus 2
+
+let phraseToCheck = "Amor, Roma";
+
+let phraseNoPunctuation = "";
+  for (let i = 0; i < phraseToCheck.length; i++){
+    if (phraseToCheck.toLowerCase().codePointAt(i) >= 97 && phraseToCheck.toLowerCase().codePointAt(i) <= 122){
+      phraseNoPunctuation += phraseToCheck.toLowerCase()[i];  
+    }
+}
+let helperReverse = ""
+for (let i = phraseNoPunctuation.length-1; i >= 0; i--){
+  helperReverse+= phraseNoPunctuation[i];
+}
+console.log(helperReverse);
+
+// this is the bit that actually returns true or false if they are palindrome 
+phraseNoPunctuation === helperReverse ? true : false;
